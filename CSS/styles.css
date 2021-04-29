@@ -1,0 +1,139 @@
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: blue;
+}
+
+/* CraetionAndElements */
+
+.creationAndElements {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Created Elements container */
+
+/* Overlay Selection */
+
+.overlaySelection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+  background: #ccc;
+
+  display: none;
+}
+
+.overlaySelection.active {
+  display: block;
+}
+.overlaySelection.inactive {
+  display: none;
+}
+.previewIMGcontainer {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  border: 2px dashed #000;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.previewIMG {
+  width: 100%;
+  height: 100%;
+}
+
+.inputFile {
+  position: absolute;
+  left: 40%;
+  height: 50px;
+}
+
+.btnClose,
+.btnCreate {
+  width: 100px;
+  height: 50px;
+  background: rgb(47, 47, 255);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btnClose {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.btnCreate {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* Create Element */
+
+.createElement {
+  height: 250px;
+  width: 250px;
+
+  min-height: 250px;
+  min-width: 250px;
+  border: 5px #ccc dashed;
+  cursor: pointer;
+  transition: opacity ease 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.createElement:hover {
+  opacity: 0.7;
+}
+
+.createElement i {
+  font-size: 50px;
+}
+
+/* Created Element container */
+
+.createdElementsContainer:last-child {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.createdFigure {
+  width: 250px;
+  height: 250px;
+  border: 5px dashed #ccc;
+  position: relative;
+  top: -15px;
+  margin-right: 20px;
+}
+
+.createdIMG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px dashed #ccc;
+}
+
+.createdIMG img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
